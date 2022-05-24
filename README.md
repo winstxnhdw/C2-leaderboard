@@ -6,7 +6,7 @@ This repository contains the leaderboard application for [C2](https://github.com
 
 Hosted on Heroku. Extremely portable.
 
-### Installation
+### Install Docker for Linux
 
 The installation script only supports Arch or Ubuntu. If you are on any other platform, you will have to install Docker manually [here](https://docs.docker.com/get-docker/).
 
@@ -26,12 +26,12 @@ During the event, internet access will be unavailable. The leaderboard has to ru
 
 ### Requirements
 
+You will need to install Docker Desktop for Windows 10 before you can run the following batch script.
+
 - Windows 10/11
 - [Docker Installer](https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe)
 
-### Install
-
-Install Docker
+### Install Docker for Windows 10
 
 ```ps1
 .\requirements_docker.bat
