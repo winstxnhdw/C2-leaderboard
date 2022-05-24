@@ -1,0 +1,7 @@
+pgdata/
+bin/
+
+*.py
+*.pyc
+*.exe
+.env

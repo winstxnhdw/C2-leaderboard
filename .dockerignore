@@ -1,0 +1,9 @@
+bin/
+
+Dockerfile
+docker_compose.yml
+.prettierrc
+*.sh
+*.pyc
+*.bat
+*.md
