@@ -31,10 +31,31 @@ You will need to install Docker Desktop for Windows 10 before you can run the fo
 - Windows 10/11
 - [Docker Installer](https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe)
 
-### Install Docker for Windows 10
+### Installation
+
+Install Docker.
 
 ```ps1
 .\requirements_docker.bat
+```
+
+Pull and save `postgres:alpine` image.
+
+```ps1
+docker pull postgres:alpine
+docker save --output bin\postgres-alpine.tar postgres:alpine
+```
+
+Build and save the leaderboard image.
+
+```ps1
+.\build.bat
+```
+
+### Usage
+
+```ps1
+.\launch.bat
 ```
 
 ## Environment Variables

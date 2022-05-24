@@ -1,4 +1,4 @@
-pgdata/
+data/
 bin/
 
 *.py

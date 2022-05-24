@@ -11,9 +11,8 @@ body {
   min-height: 450px;
   height: 100vh;
   margin: 0;
-  background: radial-gradient(ellipse farthest-corner at center top, #f39264 0%, #f2606f 100%);
-  color: #fff;
-  font-family: 'Roboto Mono', monospace;
+  background: radial-gradient(ellipse farthest-corner at center top, #0C0C0C 0%, #0C0C0C 100%);
+  color: #03A062;
 }
 
 .header {
@@ -22,14 +21,16 @@ body {
   padding-top: 5px;
   font-family: "Open Sans", sans-serif;
   font-size: 20px;
-  color: #e1e1e1;
+  font-weight: bold;
+  color: #03A062;
 }
 .header h1 {
   display: inline-block;
 }
 
 .rows {
-    background: linear-gradient(to bottom, #fa6855, #c24448);
+    //background: #0C0C0C;
+  background: linear-gradient(to bottom, #0C0C0C, #101010);
 }
 
 /*--------------------
@@ -42,9 +43,9 @@ Leaderboard
   transform: translate(-50%, -50%);
   width: 50%;
   height: auto;
-  background: linear-gradient(to bottom, #3a404d, #181c26);
+  background: linear-gradient(to bottom, #0C0C0C, #0C0C0C);
   border-radius: 10px;
-  box-shadow: 0 7px 30px rgba(62, 9, 11, 0.3);
+  box-shadow: 0 0px 20px #03A062;
   overflow: hidden;
 }
 .leaderboard h1 {
@@ -64,7 +65,7 @@ Leaderboard
 .leaderboard ol li {
   position: relative;
   z-index: 1;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Roboto Mono', monospace;
   font-size: 14px;
   counter-increment: leaderboard;
   padding: 18px 10px 18px 50px;
@@ -82,8 +83,8 @@ Leaderboard
   width: 25px;
   height: 20px;
   line-height: 20px;
-  color: #c24448;
-  background: #fff;
+  color: #0C0C0C;
+  background: #03A062;
   border-radius: 10px;
   text-align: center;
 }
@@ -98,18 +99,7 @@ Leaderboard
   padding: 18px 10px 18px 50px;
   margin: 0;
   background: none;
-  color: #fff;
-}
-.leaderboard ol li p::before, .leaderboard ol li p::after {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  bottom: -11px;
-  left: -9px;
-  border-top: 10px solid #c24448;
-  border-left: 10px solid transparent;
-  transition: all 0.1s ease-in-out;
-  opacity: 0;
+  color: #03A062;
 }
 .leaderboard ol li p::after {
   left: auto;
@@ -118,7 +108,7 @@ Leaderboard
   border-right: 10px solid transparent;
 }
 .leaderboard ol li p span {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.5);
 }
 .leaderboard ol li small {
   font-size: 18px;
@@ -126,7 +116,8 @@ Leaderboard
   z-index: 2;
   display: block;
   text-align: right;
-  padding-right: 10px;
+  padding-right: 15px;
+  font-weight: bold;
 }
 .leaderboard ol li::after {
   content: "";
@@ -136,7 +127,7 @@ Leaderboard
   left: 0;
   width: 100%;
   height: 100%;
-  background: #f38778;
+  background: #03A06266;
   box-shadow: 0 3px 0 rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease-in-out;
   opacity: 0;
