@@ -26,6 +26,7 @@ During the event, internet access will be unavailable. The leaderboard has to ru
 
 ### Requirements
 
+- Windows 10/11
 - [Docker Installer](https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe)
 
 ### Install
