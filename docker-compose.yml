@@ -1,7 +1,8 @@
 version: "2.5.1"
 services:
-  db:
+  database:
     image: postgres:alpine
+    container_name: leaderboard-db
     environment:
       - POSTGRES_DB=${POSTGRES_DB}
       - POSTGRES_HOST=${POSTGRES_HOST}
@@ -15,6 +16,7 @@ services:
 
   web:
     image: leaderboard-app
+    container_name: leaderboard-app
     environment:
       - POSTGRES_DB=${POSTGRES_DB}
       - POSTGRES_HOST=${POSTGRES_HOST}
@@ -23,6 +25,6 @@ services:
       - POSTGRES_PORT=${POSTGRES_PORT}
       - SECRET_KEY=${SECRET_KEY}
     depends_on:
-      - db
+      - database
     ports:
       - ${PORT}:${PORT}
