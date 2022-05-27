@@ -43,6 +43,8 @@ SECRET_KEY=<SECRET_KEY>
 
 ## Usage
 
+Destroys any existing Docker containers and launches the leaderboard containers.
+
 ```ps1
 .\launch.bat
 ```
