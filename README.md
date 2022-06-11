@@ -13,7 +13,7 @@ You will need to install Docker Desktop for Windows 10 before you can run the fo
 
 Install Docker and select the WSL 2 backend.
 
-> WARNING: If you use Hyper-V, you may run into a file sharing permission issue that will cause the database to crash.
+> **Warning**: If you use Hyper-V, you may run into a file sharing permission issue that will cause the database to crash.
 
 ```ps1
 .\requirements_docker.bat
