@@ -71,7 +71,7 @@ def remove_last() -> str:
 def main():
 
     port = app.config["PORT"]
-    app.run(host="0.0.0.0", port=port, debug=True)
+    app.run(host="0.0.0.0", port=port, debug=False)
 
 if __name__ == "__main__":
     main()
