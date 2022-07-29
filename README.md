@@ -1,5 +1,8 @@
 # C2-leaderboard
 
+[![Total alerts](https://img.shields.io/lgtm/alerts/g/winstxnhdw/C2-leaderboard.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/winstxnhdw/C2-leaderboard/alerts/)
+<a href="https://lgtm.com/projects/g/winstxnhdw/C2-leaderboard/alerts/"><img alt="Total alerts" src="https://img.shields.io/lgtm/alerts/g/winstxnhdw/C2-leaderboard.svg?logo=lgtm&logoWidth=18"/></a>
+
 This repository contains the serverless leaderboard application for [C2](https://github.com/winstxnhdw/C2). The local leaderboard can be found in the [windows-local](https://github.com/winstxnhdw/C2-leaderboard/tree/windows-local) branch.
 
 ## Install Docker for Linux
