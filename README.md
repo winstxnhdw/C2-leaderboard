@@ -34,11 +34,11 @@ Build and save the leaderboard image.
 
 Ensure that you set the following environment variable in a `.env` file within the root of this repository.
 
-```yaml
-POSTGRES_PASSWORD=<POSTGRES_PASSWORD>
-POSTGRES_USER=<POSTGRES_USER>
-POSTGRES_DB=<POSTGRES_DB>
-SECRET_KEY=<SECRET_KEY>
+```bash
+echo POSTGRES_PASSWORD=YOUR_POSTGRES_PASSWORD >> .env
+echo POSTGRES_USER=YOUR_POSTGRES_USER >> .env
+echo POSTGRES_DB=YOUR_POSTGRES_DB >> .env
+echo SECRET_KEY=YOUR_SECRET_KEY >> .env
 ```
 
 ## Usage
