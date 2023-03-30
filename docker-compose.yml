@@ -1,22 +1,27 @@
-version: "2.5.1"
 services:
   database:
-    image: postgres:alpine
-    container_name: leaderboard-db
     environment:
-      - POSTGRES_DB=${POSTGRES_DB}
-      - POSTGRES_HOST=${POSTGRES_HOST}
-      - POSTGRES_USER=${POSTGRES_USER}
-      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
-    volumes:
-      - ./data/postgres:/var/lib/postgresql/data
-      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_HOST: ${POSTGRES_HOST}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    image: postgres:latest
+    restart: unless-stopped
     ports:
       - ${POSTGRES_PORT}:${POSTGRES_PORT}
+    volumes:
+      -./postgres:/var/lib/postgresql/data
+      -./db:/docker-entrypoint-initdb.d/
+    healthcheck:
+      interval: 5s
+      retries: 10
+      test:
+        [
+          'CMD-SHELL',
+          'pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB'
+        ]
 
   web:
-    image: leaderboard-app
-    container_name: leaderboard-app
     environment:
       - POSTGRES_DB=${POSTGRES_DB}
       - POSTGRES_HOST=${POSTGRES_HOST}
@@ -24,6 +29,8 @@ services:
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
       - POSTGRES_PORT=${POSTGRES_PORT}
       - SECRET_KEY=${SECRET_KEY}
+    image: leaderboard-app
+    container_name: leaderboard-app
     depends_on:
       - database
     ports:
