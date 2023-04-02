@@ -10,8 +10,8 @@ services:
     ports:
       - ${POSTGRES_PORT}:${POSTGRES_PORT}
     volumes:
-      -./postgres:/var/lib/postgresql/data
-      -./db:/docker-entrypoint-initdb.d/
+      - ./postgres:/var/lib/postgresql/data
+      - ./database:/docker-entrypoint-initdb.d/
     healthcheck:
       interval: 5s
       retries: 10
